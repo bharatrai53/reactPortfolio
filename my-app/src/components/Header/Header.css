@@ -42,7 +42,7 @@
 }
 
 .navbar {
-  background: linear-gradient(to right,var(--glaucous-scss), var(--ghost-white-scss));
+  background: linear-gradient(to right,var( --zaffre-rgb-scss), var(--ghost-white-scss));
   color: #fff;
   display: flex;
   justify-content: space-between;
