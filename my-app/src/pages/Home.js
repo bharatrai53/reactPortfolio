@@ -1,29 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import About from './About';
+// import Portfolio from './Portfolio';
+import Contact from './Contact';
+// import Resume from './Resume';
 
+function Home() {
+const [activeNavItem, setActiveNavItem] = useState('About Me');
 
-const Home = () => {
-    const { loading, data } = useQuery(QUERY_SALONS)
-    console.log(data)
-    const salons = data?.salons || []
+const handleNavItemClick = (item) => {
+setActiveNavItem(item);
+};
 
 return (
-    <main>
-      <div className="flex-row justify-center border mb-3">
-        <div className="col-12 col-md-8 mb-3 align-center ">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <SalonList salons={salons} title="Available Salons" />
-          )}
-        </div>
-      </div>
-      <div className="flex-row justify-center">
-        <div className="col-12 col-md-10 mb-3 p-3"></div>
-        <SalonForm />
-      </div>
-    </main>
-    
-  )
+<>
+<Header activeNavItem={activeNavItem} onNavItemClick={handleNavItemClick} />
+{activeNavItem === 'About Me' && <About />}
+{/* {activeNavItem === 'Portfolio' && <Portfolio />} */}
+{activeNavItem === 'Contact' && <Contact />}
+{/* {activeNavItem === 'Resume' && <Resume />} */}
+<Footer />
+</>
+);
 }
 
-export default Home
+export default Home;

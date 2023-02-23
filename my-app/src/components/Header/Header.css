@@ -41,52 +41,76 @@
   --gradient-left: linear-gradient(270deg, #0d0106ff, #3626a7ff, #657ed4ff, #ff331fff, #fbfbffff);
 }
 
-
-.App {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  font-size: 16px;
-}
-
-.App-header {
-  background: var(--ghost-white);
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-  padding: 20px;
-}
-
-.App-main {
-  background: var(--gradient-right); /* use gradient-right variable */
+.navbar {
+  background: linear-gradient(to right,var(--glaucous-scss), var(--ghost-white-scss));
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1rem;
 }
 
-@media screen and (min-width: 768px) {
-  .App-main {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
   }
-}
-
-.App-main > * {
-  margin: 20px 0;
-  max-width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .App-main > * {
-    margin: 0;
-    max-width: calc(50% - 20px);
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.2s ease-in-out;
   }
-}
-
-.App-footer {
-  background: var(--gradient-bottom); /* use gradient-bottom variable */
-  box-shadow: 0 -2px 4px rgba(0,0,0,.1);
-  padding: 20px;
-  text-align: center;
-}
+  
+  .nav-link:hover {
+    background-color: #fff;
+    color: #333;
+    border-radius: 0.3rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 4.5rem;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .nav-links.show {
+      opacity: 1;
+    }
+  
+    .nav-link {
+      padding: 1rem;
+      width: 100%;
+      display: table;
+      text-align: center;
+    }
+  
+    .nav-link:hover {
+      background-color: #fff;
+      color: #333;
+      border-radius: 0;
+    }
+  
+    .navbar .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  
+    .navbar .menu-toggle.close {
+      color: #fff;
+    }
+  }
+  
