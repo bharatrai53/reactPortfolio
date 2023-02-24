@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from '../src/pages/Home'
 import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -18,12 +19,12 @@ function App() {
           <Routes>
             <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
+          <Routes>
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
           {/* <Routes>
             <Route path="/" element={<Home />} />
-          </Routes>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes> */}
+          </Routes>  */}
         </div>
       </div>
     </Router>

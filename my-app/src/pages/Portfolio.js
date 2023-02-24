@@ -31,16 +31,16 @@ function Portfolio() {
         code="https://github.com/bharatrai53/Portfolio-Project"
       />
        <Project
-        title="MunchMap"
+        title="MyBuddy"
         description="Checkout this project I made!"
-        demo="https://www.example.com/project2"
-        code="https://github.com/bharatrai53/CodingQuiz"
+        demo="https://afternoon-beyond-13914.herokuapp.com/"
+        code="https://github.com/gavinrn/MyBuddy"
       />
        <Project
-        title="Coding Quiz"
-        description="Checkout this cool coding quiz!"
-        demo="https://www.example.com/project2"
-        code="https://github.com/bharatrai53/CodingQuiz"
+        title="MunchMap"
+        description="Checkout this map app I made!"
+        demo="https://github.com/Adriansyn/MunchHub"
+        code="https://github.com/Adriansyn/MunchHub"
       />
     </div>
   );
