@@ -1,0 +1,116 @@
+:root {
+    /* CSS HEX */
+    --licorice: #0d0106ff;
+    --zaffre: #3626a7ff;
+    --glaucous: #657ed4ff;
+    --scarlet: #ff331fff;
+    --ghost-white: #fbfbffff;
+  
+    /* CSS HSL */
+    --licorice-hsl: hsla(335, 86%, 3%, 1);
+    --zaffre-hsl: hsla(247, 63%, 40%, 1);
+    --glaucous-hsl: hsla(226, 56%, 61%, 1);
+    --scarlet-hsl: hsla(5, 100%, 56%, 1);
+    --ghost-white-hsl: hsla(240, 100%, 99%, 1);
+  
+    /* SCSS HEX */
+    --licorice-scss: #0d0106ff;
+    --zaffre-scss: #3626a7ff;
+    --glaucous-scss: #657ed4ff;
+    --scarlet-scss: #ff331fff;
+    --ghost-white-scss: #fbfbffff;
+  
+    /* SCSS HSL */
+    --licorice-hsl-scss: hsla(335, 86%, 3%, 1);
+    --zaffre-hsl-scss: hsla(247, 63%, 40%, 1);
+    --glaucous-hsl-scss: hsla(226, 56%, 61%, 1);
+    --scarlet-hsl-scss: hsla(5, 100%, 56%, 1);
+    --ghost-white-hsl-scss: hsla(240, 100%, 99%, 1);
+  
+    /* SCSS RGB */
+    --licorice-rgb-scss: rgba(13, 1, 6, 1);
+    --zaffre-rgb-scss: rgba(54, 38, 167, 1);
+    --glaucous-rgb-scss: rgba(101, 126, 212, 1);
+    --scarlet-rgb-scss: rgba(255, 51, 31, 1);
+    --ghost-white-rgb-scss: rgba(251, 251, 255, 1);
+  
+    /* SCSS Gradient */
+    --gradient-top: linear-gradient(0deg, #0d0106ff, #3626a7ff, #657ed4ff, #ff331fff, #fbfbffff);
+    --gradient-right: linear-gradient(90deg, #0d0106ff, #3626a7ff, #657ed4ff, #ff331fff, #fbfbffff);
+    --gradient-bottom: linear-gradient(180deg, #0d0106ff, #3626a7ff, #657ed4ff, #ff331fff, #fbfbffff);
+    --gradient-left: linear-gradient(270deg, #0d0106ff, #3626a7ff, #657ed4ff, #ff331fff, #fbfbffff);
+  }
+  
+  .navbar {
+    background: linear-gradient(to right,var( --zaffre-rgb-scss), var( --glaucous-rgb-scss));
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .nav-link:hover {
+      background-color: #fff;
+      color: #333;
+      border-radius: 0.3rem;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+    
+      .nav-links.show {
+        opacity: 1;
+      }
+    
+      .nav-link {
+        padding: 1rem;
+        width: 100%;
+        display: table;
+        text-align: center;
+      }
+    
+      .nav-link:hover {
+        background-color: #fff;
+        color: #333;
+        border-radius: 0;
+      }
+    
+      .navbar .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+      }
+    
+      .navbar .menu-toggle.close {
+        color: #fff;
+      }
+    }
+    
